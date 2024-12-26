@@ -7,3 +7,9 @@ form.addEventListener('submit', (event) => {
 	greeting.textContent = `Hello, ${name}!`;
 });
 
+const counter = document.querySelector(".counter-number");
+async function updateCounter() {
+    let data = 10;
+    counter.innerHTML = `Views: ${data}`;
+}
+updateCounter();
