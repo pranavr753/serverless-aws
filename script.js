@@ -9,7 +9,10 @@ form.addEventListener('submit', (event) => {
 
 const counter = document.querySelector(".counter-number");
 async function updateCounter() {
-    let data = 10;
+    let response = await fetch(
+        "https://quiuxtxjmcmqb6lmyjct63mvay0pmflu.lambda-url.us-east-1.on.aws/"
+    );
+    let data = await response.json();
     counter.innerHTML = `Views: ${data}`;
 }
 updateCounter();
